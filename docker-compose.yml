@@ -4,10 +4,10 @@ networks:
     driver: bridge
 serviecs:
   web:
-  image: web:v1
-  container_name: web
-  depends_on:
-  - catalogue
+    image: web:v1
+    container_name: web
+    depends_on:
+    - catalogue
   mongodb:
     image: mongodb:v1
     container_name: mongodb
