@@ -1,13 +1,13 @@
-version: "3"
+version: "3.9"
 networks:
   roboshop:
     driver: bridge
-serviecs:
+services:
   web:
     image: web:v1
     container_name: web
     depends_on:
-    - catalogue
+      - catalogue
   mongodb:
     image: mongodb:v1
     container_name: mongodb
@@ -15,10 +15,10 @@ serviecs:
     image: catalogue:v1
     container_name: catalogue
     depends_on:
-    - mongodb
+      - mongodb
   user:
     image: user:v1
     container_name: user
     depends_on:
-    - mongodb
-    - redis
+      - mongodb
+      - redis
