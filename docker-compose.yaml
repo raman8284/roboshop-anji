@@ -80,7 +80,7 @@ services:
     image: rabbitmq
     container_name: rabbitmq
     volumes:
-      - rabbitmq
+      - rabbitmq:/var/lib/rabbitmq
   payment:
     image: raman89/payment:v1
     container_name: payment
